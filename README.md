@@ -139,6 +139,8 @@ Estos puntos los presentarás en el `README.md`.
 Debe contener lo siguiente:
 
 * Un título con el nombre de tu proyecto.
+* Explicar cómo descargar, instalar y ejecutar la aplicación
+  así como una introducción.
 * Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
 * La imagen final de tu proyecto.
 * Investigación UX:
