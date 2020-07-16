@@ -6,8 +6,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header> Paso 2: Validación de tarjeta (imagen de los pasitos anteriores) </header>
+    <section> 
+      <main>
+      <h1>
+        Para continuar con el proceso de compra, te pedimos que ingreses el número de tu tarjeta para verificarlo.
+      </h1>
+
+      <form id="validarTarjeta"> 
+        <label for="numeroTarjeta"> </label>
+          
+        <input 
+        type="text"
+        id="numeroTarjeta"
+        minlength="16"
+        maxlength="16"
+        placeholder="Ingresa los números sin espacios"
+        required
+        >
+        
+      
+         <input 
+       type="submit"
+       id="botonValidar"
+       value="VALIDAR"
+       >
+      
+  
+      </form>
+      </main>
+    
+    </section>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
