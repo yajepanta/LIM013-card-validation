@@ -20,7 +20,7 @@ describe('validator', () => {
     });
 
     it.skip('debería retornar false para "1234567890"', () => {
-      // escribe aquí tu test
+     // escribe aquí tu test
     });
   });
 
