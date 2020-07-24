@@ -3,7 +3,8 @@ const validator = {
  isValid: function (valorTarjeta) {
     
   //split trabaja con strings, devuelve cada substring en array, reverse invierte la lista de elementos
-  var numerosEnteros = valorTarjeta.split("").reverse();
+  //quite .reverse()
+  var numerosEnteros = valorTarjeta.split("");
 
   var sumaParesMayores = [];
   var paresMenores = [];
@@ -11,7 +12,7 @@ const validator = {
   let sumaTotal = [];
   //for crea un bucle donde se analiza la posicion de cada numero !pero no se está analizando la posicion!
 
-       for (var i = 0; i < numerosEnteros.length-1; i++ ) {
+       for (var i = 0; i < numerosEnteros.length; i++ ) {
       //  var posiciones = [i]; 
      // va a filtrar las posiciones de los numeros pares e impares y almacenar valor 
        // var posicionPar = posiciones.filter(i => i%2 === 0);
@@ -40,7 +41,7 @@ const validator = {
           else {
 
             // si no cumple que es mayor, se agrega directamente a la cadena, como string
-            paresMenores += numerosEnteros[i];
+            paresMenores += numerosEnteros[i] * 2;
             
 
           }
