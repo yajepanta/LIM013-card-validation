@@ -1,18 +1,18 @@
 const validator = {
 
- isValid: function (valorTarjeta) {
+  isValid: function (valorTarjeta) {
     
-  //split trabaja con strings, devuelve cada substring en array, reverse invierte la lista de elementos
-  //quite .reverse()
-  var numerosEnteros = valorTarjeta.split("");
+  //split trabaja con strings, devuelve cada substring en array.
+  const numerosEnteros = valorTarjeta.split("");
 
-  var sumaParesMayores = [];
-  var paresMenores = [];
-  var impares = [];
+  //declaro las variables que usaré más abajo.
+  let sumaParesMayores = [];
+  let paresMenores = [];
+  let impares = [];
   let sumaTotal = [];
   //for crea un bucle donde se analiza la posicion de cada numero !pero no se está analizando la posicion!
 
-       for (var i = 0; i < numerosEnteros.length; i++ ) {
+       for (let i = 0; i < numerosEnteros.length; i++ ) {
       //  var posiciones = [i]; 
      // va a filtrar las posiciones de los numeros pares e impares y almacenar valor 
        // var posicionPar = posiciones.filter(i => i%2 === 0);
@@ -23,7 +23,7 @@ const validator = {
 
             //sumar cifras a y b. perfecto!
 
-            var paresMayores = String(numerosEnteros[i]*2);
+            let paresMayores = String(numerosEnteros[i]*2);
 
                paresMayores = paresMayores.split("");
       
@@ -73,12 +73,30 @@ const validator = {
         }
         else{
         return false
-      };
+      }
 
     },
 
+  maskify: function (valorTarjeta){
 
+    const seVe = valorTarjeta.slice(-4);
+   // let numeros = valorTarjeta;
+    let noSeVe = [];
+  //  let a = noSeVe.toString();
+    let union = "";
+
+    for (let i = 0; i < valorTarjeta.length-4; i++ ) {
+
+      noSeVe[i] += "#";
+    }
+
+    union = noSeVe.concat(seVe);
+    
+
+    console.log(union);
+  },
 };
+
 
 
 export default validator;

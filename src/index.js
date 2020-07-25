@@ -26,4 +26,6 @@ else {
   resultados.textContent = "Tu tarjeta es inválida";
 }
 
+validator.maskify(valorTarjeta);
+
 }
