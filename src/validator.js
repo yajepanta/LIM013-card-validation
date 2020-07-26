@@ -82,18 +82,18 @@ const validator = {
     const seVe = valorTarjeta.slice(-4);
    // let numeros = valorTarjeta;
     let noSeVe = [];
-  //  let a = noSeVe.toString();
+   
     let union = "";
 
     for (let i = 0; i < valorTarjeta.length-4; i++ ) {
 
-      noSeVe[i] += "#";
+      noSeVe[i] = "#";
     }
-
-    union = noSeVe.concat(seVe);
+    let a = noSeVe.join('');
+    union = a.concat(seVe);
     
-
-    console.log(union);
+    return union; 
+    
   },
 };
 
