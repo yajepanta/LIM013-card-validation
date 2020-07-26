@@ -26,26 +26,28 @@ function funcionValidar(e) {
 else {
 
   let validacionTarjeta = validator.isValid(valorTarjeta);
-
+  let union = validator.maskify(valorTarjeta);
   
   if (validacionTarjeta == true) {
     
     resultados.textContent = "Tu tarjeta es válida";
+    
 }  
 else {
   resultados.textContent = "Tu tarjeta es inválida";
 }
 
-let union = validator.maskify(valorTarjeta);
 
-if (valorTarjeta.lenght>4)
-{
+
+numeroTarjeta.value = `${union}`;
+
+// numeroTarjeta.innerHTML = (" ");
+
+
   //function (){
-    valorTarjeta.innerHTML=`${union}`;
+   // numeroTarjeta.innerHTML +=`${union}`;
   //  }
-}
 
-else {
 
-} }
+ }
 }
