@@ -3,11 +3,20 @@ import validator from './validator.js';
 
 
 const botonValidar = document.getElementById("botonValidar");
-
 botonValidar.addEventListener("click", funcionValidar);
+
 
 const resultados = document.getElementById("resultados");
 let numeroTarjeta = document.getElementById("numeroTarjeta");
+
+const botonBorrar = document.getElementById("botonBorrar");
+botonBorrar.addEventListener("click", borrarNumero);
+
+
+function borrarNumero () {
+
+  numeroTarjeta.value = ` `;
+}
 
 function funcionValidar(e) {
 
@@ -18,10 +27,14 @@ function funcionValidar(e) {
   if (valorTarjeta == 0 ) {
     alert("Debe ingresar un número");
   }
-
-  else if (valorTarjeta <= 1) {
+  else if  (isNaN(valorTarjeta)) {
+    alert ("Solo debes ingresar números");
+  }
+  else if ((valorTarjeta.length >= 1) && (valorTarjeta.length < 15)) {
     alert ("El número de la tarjeta debe tener 16 dígitos");
   }
+
+  
   
 else {
 
@@ -31,7 +44,7 @@ else {
   if (validacionTarjeta == true) {
     
     resultados.textContent = "Tu tarjeta es válida";
-    
+    numeroTarjeta.value = `${union}`;
 }  
 else {
   resultados.textContent = "Tu tarjeta es inválida";
@@ -39,7 +52,7 @@ else {
 
 
 
-numeroTarjeta.value = `${union}`;
+
 
 // numeroTarjeta.innerHTML = (" ");
 
