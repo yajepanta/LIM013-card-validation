@@ -10,88 +10,81 @@ const validator = {
   let paresMenores = [];
   let impares = [];
   let sumaTotal = [];
-  //for crea un bucle donde se analiza la posicion de cada numero !pero no se está analizando la posicion!
 
-       for (let i = 0; i < numerosEnteros.length; i++ ) {
-      //  var posiciones = [i]; 
-     // va a filtrar las posiciones de los numeros pares e impares y almacenar valor 
-       // var posicionPar = posiciones.filter(i => i%2 === 0);
-
-        if (i%2 === 0) {
+    //for crea un bucle donde se analiza la posicion de cada numero, segun el nro de digitos de numerosEnteros
+    for (let i = 0; i < numerosEnteros.length; i++ ) {
+     
+    // Condicion 1: Cuando la posicion es par.
+      if (i%2 === 0) {
         
-          if (numerosEnteros[i]*2 >= 9) {
+      // Condicion 1.1: Si el numero de la posicion par es mayor a 9:
+        if (numerosEnteros[i]*2 >= 9) {
 
-            //sumar cifras a y b. perfecto!
-
-            let paresMayores = String(numerosEnteros[i]*2);
-
-               paresMayores = paresMayores.split("");
-      
-           //Es un number.
-
-            paresMayores = paresMayores.reduce((a, b) => {
+        // Vuelvo a string el array, lo multiplico x 2, y vuelvo a dividirlo en arrays para sumarlos individualmente como numeros.
+        let paresMayores = String(numerosEnteros[i]*2);
+        paresMayores = paresMayores.split("");
+        paresMayores = paresMayores.reduce((a, b) => {
               return parseInt(a) + parseInt(b);
           });
 
-// agregue += para que se agregue, y no solo reemplace al nro. Es un string.
-            sumaParesMayores += paresMayores;
+        // uso += para que se agregue a la variable declarada arriba, y no solo reemplace al nro. Se vuelve un string. (?)
+        sumaParesMayores += paresMayores;
 
           }
-          
-          else {
-
-            // si no cumple que es mayor, se agrega directamente a la cadena, como string
+        
+      // Condicion 1.2: Si el numero de la posicion par es menor a 9, agregamos directamente el producto. Tb es un string (?)
+        else {
             paresMenores += numerosEnteros[i] * 2;
-            
 
-          }
-         
+          }        
         }
 
-        else {
-
-          //me retorna string
+    // Condicion 2: si la posicion es impar, el numero pasa a ser almacenado directamente. Es un string.
+      else {
           impares += numerosEnteros[i];
-
         }
  
-          }
+    }
 
- // paresMayores = paresMayores.reduce((a, b) => {
- // return parseInt(a) + parseInt(b);});
+  // Sumatorias. 1. es un string, 2. se divide en arrays, 3. se convierte a numeros y se suma.
 
          sumaTotal += sumaParesMayores+paresMenores+impares;
-
          sumaTotal = sumaTotal.split("");
-
          sumaTotal = sumaTotal.reduce((a, b) => {
           return parseInt(a) + parseInt(b);
       });
 
-      if ((sumaTotal % 10) == 0){
+  // Condicion 3. Obtenemos un boolean.
+
+    if ((sumaTotal % 10) == 0){
         return true
         }
-        else{
+    else{
         return false
       }
 
-    },
+  },
 
   maskify: function (valorTarjeta){
 
+    // Constante 1: Los ultimos 4 numeros del value de la tarjeta.
     const seVe = valorTarjeta.slice(-4);
-   // let numeros = valorTarjeta;
+
+   // Declaracion de variables que seran usadas en el bucle. Un array y un string.
     let noSeVe = [];
-   
     let union = "";
 
+    // Bucle: Analiza todas las posiciones menos las 4 ultimas, y las reemplaza por #
     for (let i = 0; i < valorTarjeta.length-4; i++ ) {
 
       noSeVe[i] = "#";
     }
-    let a = noSeVe.join('');
-    union = a.concat(seVe);
-    
+
+    // el metodo join me permite unir todos los elementos del array en un string, porque de otra manera no podia sumarlos, me salia un solo michi
+    noSeVe = noSeVe.join('');
+
+    // en la variable union, se concatenan todoslos elementos y retorna un string.
+    union = noSeVe.concat(seVe);
     return union; 
     
   },
@@ -101,6 +94,9 @@ const validator = {
 
 export default validator;
 
+ //  var posiciones = [i]; 
+     // va a filtrar las posiciones de los numeros pares e impares y almacenar valor 
+       // var posicionPar = posiciones.filter(i => i%2 === 0);
 
    /*  convierte los strings a numbers, si no da positivo, retorna Nan. Si es NaN, indicar "numero incorrecto"
  switch (numerosIndividuales) {
