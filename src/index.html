@@ -6,23 +6,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>       
+    <header class="flex-container">       
       
-      <img src="img\nav1.png">
-      <img src="img\nav2.png">
-      <img src="img\nav3.png">
+      <img class="flex-item" src="img\nav1.png">
+      <p> 1. Ingresa tus datos </p>
+      <img class="flex-item" src="img\nav2.png">
+      <p> 2. Verifica tu tarjeta </p>
+      <img class="flex-item" src="img\nav3.png">
+      <p> 3. Recibe tu pedido </p>
 
-    
   </header>
     <section> 
 
       <main>
       <p>
-        Para continuar con el proceso de compra, te pedimos que ingreses el número de tu tarjeta para verificarlo.
+        Para continuar con el proceso de compra, debemos validar el número de tu tarjeta.
+        Por favor, ingrésalo en la casilla.
       </p>
 
-        <img id="imgTarjeta" src="img/tarjeta.jpg">
-
+        <!-- <img id="imgTarjeta" src="img/tarjeta.jpg"> -->
+<div >
       <form id="validarTarjeta"> 
         <label for="numeroTarjeta"> </label>
           
@@ -34,9 +37,9 @@
         placeholder="Ingresa los números sin espacios"
         
         >
-        
+        <p id="resultados"></p>
         <button id="botonBorrar"> BORRAR NÚMERO </button>
-       <p id="resultados"></p>
+       
       
          <button
        id="botonValidar"> VALIDAR </button>
@@ -44,6 +47,7 @@
        
   
       </form>
+      </div>
       </main>
     
     </section>

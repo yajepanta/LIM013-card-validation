@@ -16,13 +16,40 @@ header {
     background: rgba(255, 255, 255, 0.55);
     border-radius: 50px;
     width: 500px;
-    position: relative;
+    position: absolute;
+    width: 533px;
+    height: 163px;
+    left: 133px;
+    top: 16px;
+
 }
 
 img {
-
+position: absolute;
     width: 105px;
     height: 110px;
+
+    
+}
+
+/* .flex-container {
+    display: flex;
+    
+  }
+
+  .flex-item {
+    flex-direction: row;
+    width: 105px;
+    height: 110px;
+
+
+  } */
+  
+/* main {
+    background: #FFFCFC;
+    opacity: 50%; */
+
+
 
 }
 
@@ -31,6 +58,24 @@ img {
     height: 204px;
     border-radius: 10px;
 }
+
+#numeroTarjeta {
+    background-color: #B65DE0;
+   
+    border-radius: 20px;
+    width: 307px;
+    height: 45px;
+    color: rgba(0, 0, 0, 0.7);
+
+
+
+}
+
+main {
+
+    padding-top: 200px;
+}
+
 
 #botonValidar {
 

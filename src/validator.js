@@ -3,7 +3,7 @@ const validator = {
   isValid: function (valorTarjeta) {
     
   //split trabaja con strings, devuelve cada substring en array.
-  const numerosEnteros = valorTarjeta.split("");
+  let numerosEnteros = valorTarjeta.split("");
 
   //declaro las variables que usaré más abajo.
   let sumaParesMayores = [];
@@ -12,7 +12,7 @@ const validator = {
   let sumaTotal = [];
 
     //for crea un bucle donde se analiza la posicion de cada numero, segun el nro de digitos de numerosEnteros
-    for (let i = 0; i < numerosEnteros.length; i++ ) {
+  for (let i = 0; i < numerosEnteros.length; i++ ) {
      
     // Condicion 1: Cuando la posicion es par.
       if (i%2 === 0) {
@@ -47,17 +47,17 @@ const validator = {
     }
 
   // Sumatorias. 1. es un string, 2. se divide en arrays, 3. se convierte a numeros y se suma.
-
-         sumaTotal += sumaParesMayores+paresMenores+impares;
-         sumaTotal = sumaTotal.split("");
-         sumaTotal = sumaTotal.reduce((a, b) => {
-          return parseInt(a) + parseInt(b);
+    sumaTotal += sumaParesMayores+paresMenores+impares;
+    sumaTotal = sumaTotal.split("");
+    sumaTotal = sumaTotal.reduce((a, b) => {
+    return parseInt(a) + parseInt(b);
       });
+         
 
   // Condicion 3. Obtenemos un boolean.
 
     if ((sumaTotal % 10) == 0){
-        return true
+        return  true
         }
     else{
         return false

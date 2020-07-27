@@ -7,7 +7,7 @@ botonValidar.addEventListener("click", funcionValidar);
 const resultados = document.getElementById("resultados");
 let numeroTarjeta = document.getElementById("numeroTarjeta");
 
-const botonBorrar = document.getElementById("botonBorrar");
+let botonBorrar = document.getElementById("botonBorrar");
 botonBorrar.addEventListener("click", borrarNumero);
 
 // Reemplaza el value por un string vacio.
@@ -24,17 +24,17 @@ function funcionValidar(e) {
 
   //Condicion 1: Si el valor ingresado es 0
   if (valorTarjeta == 0 ) {
-    alert("Debe ingresar un número");
+    resultados.textContent = "Debe ingresar un número";
   }
 
   //Condicion 2: Si el valor ingresado es Nan
       else if  (isNaN(valorTarjeta)) {
-    alert ("Solo debes ingresar números");
+    resultados.textContent = "Solo debes ingresar números";
   }
 
   //Condicion 3: Si tiene mas de 1 y menos de 15 digitos
       else if ((valorTarjeta.length >= 1) && (valorTarjeta.length < 15)) {
-    alert ("El número de la tarjeta debe tener 16 dígitos");
+    resultados.textContent = "El número de la tarjeta debe tener 16 dígitos";
   }
 
   //Condicion 4: En los demas casos
@@ -48,24 +48,13 @@ function funcionValidar(e) {
     
     resultados.textContent = "Tu tarjeta es válida";
     numeroTarjeta.value = `${union}`;
+    botonValidar.textContent = "CONTINUAR";
       }  
 
     // Condicion 4.2
       else {
   resultados.textContent = "Tu tarjeta es inválida";
       }
-
-
-
-
-
-// numeroTarjeta.innerHTML = (" ");
-
-
-  //function (){
-   // numeroTarjeta.innerHTML +=`${union}`;
-  //  }
-
 
  }
 }
