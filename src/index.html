@@ -5,53 +5,71 @@
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <header class="flex-container">       
+    <main> 
+      <header>            
+        <div>
+          <img  src="img\nav1.png">
+          <p> 1. Ingresa tus datos </p><br>
+        </div>
+
+        <div>
+          <img  src="img\nav2.png">
+          <p><b> 2. Verifica tu tarjeta </b></p><br>
+        </div>
+
+        <div>
+          <img  src="img\nav3.png">
+          <p> 3. Recibe tu pedido </p><br>
+        </div>
+      </header>
+                      <!--  EMPIEZA LA SECCIÓN DE RECOLECCIÓN DE DATOS -->
+<!-- <section class="datos">
+  <p>
+    Solo faltan unos pasos y completaremos el proceso.<br>
+    Ingresa tus datos, por favor.
+  </p>
+
+
+
+</section>
+ -->
+
+
+
+                              <!-- TERMINA SECCIÓN -->
+                       <!-- EMPIEZA LA SECCIÓN DE VALIDACIÓN -->
+
+      <section>
+        <p>
+          Para continuar con el proceso de compra, debemos validar el número de tu tarjeta.<br>
+          Por favor, ingrésalo en la casilla.
+        </p>
+        <img id="imgTarjeta" src="img/tarjeta.jpg">
+
       
-      <img class="flex-item" src="img\nav1.png">
-      <p> 1. Ingresa tus datos </p>
-      <img class="flex-item" src="img\nav2.png">
-      <p> 2. Verifica tu tarjeta </p>
-      <img class="flex-item" src="img\nav3.png">
-      <p> 3. Recibe tu pedido </p>
-
-  </header>
-    <section> 
-
-      <main>
-      <p>
-        Para continuar con el proceso de compra, debemos validar el número de tu tarjeta.
-        Por favor, ingrésalo en la casilla.
-      </p>
-
-        <!-- <img id="imgTarjeta" src="img/tarjeta.jpg"> -->
-<div >
-      <form id="validarTarjeta"> 
-        <label for="numeroTarjeta"> </label>
-          
-        <input 
-        type="text"
-        id="numeroTarjeta"
-        minlength="16"
-        maxlength="16"
-        placeholder="Ingresa los números sin espacios"
+      
         
-        >
-        <p id="resultados"></p>
-        <button id="botonBorrar"> BORRAR NÚMERO </button>
-       
+        <form id="validarTarjeta" autocomplete="off"> 
+          <label for="numeroTarjeta"> </label>
+          <input 
+                type="text"
+                id="numeroTarjeta"
+                minlength="16"
+                maxlength="16"
+                placeholder="Ingresa los números sin espacios">
+
+            <button id="botonBorrar"> Borrar número</button>
+            <p id="resultados"></p>
+            <button id="botonValidar"> VALIDAR </button>
+
+        </form>
+        
+      </section>
       
-         <button
-       id="botonValidar"> VALIDAR </button>
-      
-       
-  
-      </form>
-      </div>
-      </main>
-    
-    </section>
-    <footer></footer>
+                          <!-- TERMINA SECCIÓN -->
+    </main>
     <script src="index.js" type="module"></script>
   </body>
 </html>

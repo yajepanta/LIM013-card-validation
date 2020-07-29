@@ -3,7 +3,6 @@ import validator from './validator.js';
 const botonValidar = document.getElementById("botonValidar");
 botonValidar.addEventListener("click", funcionValidar);
 
-
 const resultados = document.getElementById("resultados");
 let numeroTarjeta = document.getElementById("numeroTarjeta");
 

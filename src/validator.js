@@ -52,11 +52,12 @@ const validator = {
     sumaTotal = sumaTotal.reduce((a, b) => {
     return parseInt(a) + parseInt(b);
       });
+      sumaTotal = sumaTotal % 10;
          
 
   // Condicion 3. Obtenemos un boolean.
 
-    if ((sumaTotal % 10) == 0){
+    if (sumaTotal === 0){
         return  true
         }
     else{
