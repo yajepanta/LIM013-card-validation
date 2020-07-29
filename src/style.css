@@ -6,6 +6,14 @@ body {
     color: rgba(0, 0, 0, 0.7);
 }
 
+.ocultar {
+    display:none; 
+}
+
+.resaltado {
+    font-weight: bold;
+}
+
 main {
     display:flex;
     flex-direction:column;
@@ -54,20 +62,53 @@ section{
     width: 445px;
     font-size: 22px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
 }
 
 #resultados {
+    
     width: 445px;
     font-size: 22px;
-    text-align: center;
+    
 }
-section > img {
-    border-radius: 10px;
+/* section >div > img {
+    border-radius: 15px;
     width: 396px;
     height: 203px;
     left: 180px;
     top: 3188px;
-    margin:  0 0 10px 0 ;
+    
+} */
+
+section >div {
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: flex-end; */
+    background: url("img/tarjeta.jpg");
+    border-radius: 15px;
+    background-size: cover;
+    width: 390px;
+    height: 220px;
+    margin: 0 0px 20px 0;
+    /* left: 180px;
+    top: 3188px; */
+}
+
+#encima {
+    /* display: flex; */
+    background-color: #200F33;
+    font-size: 15px;
+    font-family: inherit;
+    color: white;
+    margin: 190px 0px 0 0;
+    width: 220px;
+    height: 20px;
+
+    top: 300px;
+    left: 550px;
+    /* transform: translate(-50%, -50%); */
 }
 
 input {
@@ -79,13 +120,32 @@ input {
     font-family: inherit;
     font-size: 18px;
     color: inherit;
+    
+}
+
+.inputDatos {
+    width: 500px;
+    margin: 10px 0 10px 0;
+
+}
+
+.incompleto {
+    border: 4px solid rgba(151, 56, 225, 0.65);
+    box-sizing: border-box;
+    border-radius: 20px;
 
 }
 ::-webkit-input-placeholder {
    color: rgba(0, 0, 0, 0.7);
 }
 
-#botonBorrar {
+label {
+    display: flex;
+    justify-content: space-around;
+    line-height: 45px;
+   }
+
+.botonMorado {
     width: 150px;
     height: 45px;
     left: 494px;
@@ -94,16 +154,13 @@ input {
     background: rgba(128, 84, 255, 0.4);
     border-radius: 20px;
     font-size: 18px;
-    line-height: 24px;
     font-family: inherit;
     color: #FFFBFB;
 }
 
-#botonValidar {
+.botonPrincipal {
     width: 190px;
-    height: 53px;
-    left: 324px;
-    top: 658px;
+    height: 50px;
     font-family: inherit;
     font-size: 30px;
     line-height: 40px;
