@@ -64,8 +64,8 @@ function borrarNumero (b) {
 
 
 numeroTarjeta.addEventListener("keyup", actualizarNumero);
-function actualizarNumero(){
 
+function actualizarNumero(){
 /* let value2 = document.getElementById("numeroTarjeta").value; */
 document.getElementById("encima2").innerHTML =` ${numeroTarjeta.value} ` ;
 
