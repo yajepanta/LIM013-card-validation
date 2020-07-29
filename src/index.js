@@ -40,6 +40,8 @@ Por favor, ingrésalo en la casilla.`;
 
 
 document.getElementById("encima").innerHTML =  `${nombre.value.toUpperCase()}   ${apellidos.value.toUpperCase()} `;
+
+
 }
 
 }
@@ -48,7 +50,7 @@ const botonValidar = document.getElementById("botonValidar");
 botonValidar.addEventListener("click", funcionValidar);
 
 let resultados = document.getElementById("resultados");
-let numeroTarjeta = document.getElementById("numeroTarjeta");
+var numeroTarjeta = document.getElementById("numeroTarjeta");
 
 let botonBorrar = document.getElementById("botonBorrar");
 botonBorrar.addEventListener("click", borrarNumero);
@@ -58,6 +60,16 @@ function borrarNumero (b) {
   b.preventDefault();
   numeroTarjeta.value = ` `;
   resultados.textContent = "";
+}
+
+
+numeroTarjeta.addEventListener("keyup", actualizarNumero);
+function actualizarNumero(){
+
+/* let value2 = document.getElementById("numeroTarjeta").value; */
+document.getElementById("encima2").innerHTML =` ${numeroTarjeta.value} ` ;
+
+ /* encima2.innerHTML = ` ${value2} `; */
 }
 
 function funcionValidar(e) {
