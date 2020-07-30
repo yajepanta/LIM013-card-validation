@@ -38,7 +38,7 @@ function siguientePagina (a) {
     seccionValidacion.classList.remove("ocultar");
     seccionDatos.classList.add("ocultar");
 
-    // Cabecera
+    // Cabecera. falta declarar
     document.getElementsByTagName("div")[0].classList.remove("resaltado");
     document.getElementsByTagName("div")[1].classList.add("resaltado");
 
