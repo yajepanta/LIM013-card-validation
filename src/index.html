@@ -26,41 +26,42 @@
         </div>
       
       </header>
-                      <!--  EMPIEZA LA SECCIÓN DE RECOLECCIÓN DE DATOS -->
-<section id="datos">
-  <p>
-    Solo faltan unos pasos y completaremos el proceso.<br>
-    Ingresa tus datos, por favor.
-  </p>
 
-  <form autocomplete="off"> 
-        
-    <label class="botonMorado"> Nombre </label> 
-          <input class="inputDatos"
-          type="text"
-          id="nombre"
-          placeholder="Ingresa tu nombre"> 
+                      <!--  EMPIEZA LA SECCIÓN DE DATOS -->
+      <section id="datos">
+        <p>
+          Solo faltan unos pasos y completaremos el proceso.<br>
+          Ingresa tus datos, por favor.
+        </p>
 
-    <label class="botonMorado"> Apellidos</label> 
-          
-          <input class="inputDatos"
-          type="text"
-          id="apellidos"
-          placeholder="Ingresa tus apellidos">
+        <form id="datosForm" autocomplete="off"> 
+          <label for="datosForm"> </label> 
+            
+          <label class="botonMorado"> Nombre </label> 
+                <input class="inputDatos"
+                type="text"
+                id="nombre"
+                placeholder="Ingresa tu nombre"> 
 
-    <label  class="botonMorado"> Dirección</label> 
+          <label class="botonMorado"> Apellidos</label> 
+                
+                <input class="inputDatos"
+                type="text"
+                id="apellidos"
+                placeholder="Ingresa tus apellidos">
 
-          <input class="inputDatos"
-          type="text"
-          id="direccion"
-          placeholder="Ingresa tu dirección">
-      
+          <label  class="botonMorado"> Dirección</label> 
 
-      <button class="botonPrincipal" id="botonContinuar"> CONTINUAR </button>
+                <input class="inputDatos"
+                type="text"
+                id="direccion"
+                placeholder="Ingresa tu dirección">
+            
 
-  </form>
+            <button class="botonPrincipal" id="botonContinuar"> CONTINUAR </button>
+        </form>
 
-</section>
+      </section>
 
 
 
@@ -69,6 +70,8 @@
                        <!-- EMPIEZA LA SECCIÓN DE VALIDACIÓN -->
 
       <section class="ocultar" id="validacion">
+
+        <!-- Se llenará en JS -->
         <p>        </p>
 
         <div>
@@ -76,7 +79,7 @@
             <p id="encima2"></p>
         </div>
         
-      
+       <!-- *** -->
       
         
         <form id="validarTarjeta" autocomplete="off"> 

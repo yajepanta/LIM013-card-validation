@@ -46,7 +46,7 @@ const validator = {
  
     }
 
-  // Sumatorias. 1. es un string, 2. se divide en arrays, 3. se convierte a numeros y se suma.
+  // Sumatorias. 1. es un string, 2. se divide en arrays, 3. se convierte a numeros y se suma. 4. Retorna el residuo de 10
     sumaTotal += sumaParesMayores+paresMenores+impares;
     sumaTotal = sumaTotal.split("");
     sumaTotal = sumaTotal.reduce((a, b) => {
@@ -66,6 +66,7 @@ const validator = {
 
   },
 
+  
   maskify: function (valorTarjeta){
 
     // Constante 1: Los ultimos 4 numeros del value de la tarjeta.

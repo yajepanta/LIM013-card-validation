@@ -10,13 +10,13 @@ describe('validator', () => {
       expect(typeof validator.isValid).toBe('function');
     });
 
-    it('debería retornar true para "4083952015263"', () => {
+    it('debería retornar true para "5496047592574413"', () => {
       expect(validator.isValid("5496047592574413")).toBe(true);
      
     });
 
-    it('debería retornar true para "79927398713"', () => {
-      expect(validator.isValid("5496047592574413")).toBe(true);
+    it('debería retornar true para "4944602264309752"', () => {
+      expect(validator.isValid("4944602264309752")).toBe(true);
     });
 
     it('debería retornar false para "1234567890"', () => {
