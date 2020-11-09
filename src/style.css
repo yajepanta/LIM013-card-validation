@@ -1,5 +1,6 @@
 body {
-    background: linear-gradient(to bottom, #fbc7d4,#9796f0 );
+    background: rgb(151,150,240);
+    background: linear-gradient(90deg, rgba(151,150,240,1) 0%, rgba(251,199,212,1) 30%, rgba(251,199,212,1) 70%, rgba(151,150,240,1) 100%);
     font-size: 1em;
     font-family: Roboto Slab;
     text-align: center;
