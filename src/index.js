@@ -117,7 +117,12 @@ function funcionValidar(e) {
     
           resultados.textContent = "Tu tarjeta es válida";
           numeroTarjeta.value = `${union}`;
-          botonValidar.textContent = "CONTINUAR";
+          const seccionEndValidation = document.getElementById('validated');
+          seccionEndValidation.classList.remove("ocultar");
+          seccionValidacion.classList.add("ocultar");
+           // Cabecera. 
+          document.getElementsByTagName("div")[1].classList.remove("resaltado");
+          document.getElementsByTagName("div")[2].classList.add("resaltado");
             }  
 
     // Condicion 4.2
@@ -137,13 +142,5 @@ function funcionValidar(e) {
     </div>
   </div>
 </div> */}
-  
-
-
-
-
-$(document).ready(function(){
-  $('#exampleModal').modal('show');
-}); 
 
 
